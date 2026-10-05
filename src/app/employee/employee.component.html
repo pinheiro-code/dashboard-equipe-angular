@@ -1,3 +1,9 @@
+<select [formControl]="statusFilter">
+  <option value="todos">Todos</option>
+  <option value="online">Online</option>
+  <option value="offline">Offline</option>
+</select>
 <p *ngFor="let employee of employees" [ngClass]="employee.status">
-  {{ employee.name }}, {{ employee.role }}, {{ employee.taskCount }} {{employee.taskCount === 1 ? 'tarefa' : 'tarefas'}}
+  {{ employee.name }}, {{ employee.role }}, {{ employee.taskCount }}
+  {{ employee.taskCount === 1 ? "tarefa" : "tarefas" }}
 </p>

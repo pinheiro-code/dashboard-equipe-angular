@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { EmployeeService } from './employee.service';
 import { IEmployee } from './shared/employee';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-employee',
@@ -9,6 +10,8 @@ import { IEmployee } from './shared/employee';
 })
 export class EmployeeComponent {
   employees: IEmployee[] = [];
+  statusFilter = new FormControl('todos');
+  
   constructor(private employeeService: EmployeeService) {}
 
   ngOnInit() {
