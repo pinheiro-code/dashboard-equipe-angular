@@ -36,7 +36,7 @@ O projeto é construído em partes, e cada parte só começa quando a anterior e
 - [x] Módulo de funcionários com componente, service e modelo (`IEmployee`)
 - [x] Componente de funcionários aparecendo na tela inicial
 - [x] Lista de funcionários vinda do service, com `Observable`
-- [ ] Status e contagem de tarefas com `*ngFor`, `ngClass` e pipes
+- [x] Cargo, status e contagem de tarefas com `*ngFor`, `ngClass` e ternário
 
 **Parte 2: filtros e dados**
 
