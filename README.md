@@ -40,7 +40,7 @@ O projeto é construído em partes, e cada parte só começa quando a anterior e
 
 **Parte 2: filtros e dados**
 
-- [ ] Filtros com Reactive Forms
+- [x] Filtros com Reactive Forms
 - [ ] Dados vindos de uma API fake (`json-server`) com `HttpClient`
 - [ ] Requisições combinadas com `forkJoin`
 

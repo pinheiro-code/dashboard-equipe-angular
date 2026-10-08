@@ -10,13 +10,22 @@ import { FormControl } from '@angular/forms';
 })
 export class EmployeeComponent {
   employees: IEmployee[] = [];
+  allEmployees: IEmployee[] = [];
   statusFilter = new FormControl('todos');
-  
+
   constructor(private employeeService: EmployeeService) {}
 
   ngOnInit() {
     this.employeeService.getEmployees().subscribe((lista) => {
+      this.allEmployees = lista;
       this.employees = lista;
+    });
+    this.statusFilter.valueChanges.subscribe((valor) => {
+      if (valor === 'todos') {
+        this.employees = this.allEmployees;
+      } else {
+        this.employees = this.allEmployees.filter((employee) => employee.status === valor);
+      }
     });
   }
 }
